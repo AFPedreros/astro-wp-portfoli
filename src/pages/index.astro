@@ -1,0 +1,28 @@
+---
+import '../../styles/global.css';
+import Layout from '../layouts/Layout.astro';
+import LucideIcon from '../components/lucide-icon.svelte';
+import Navbar from '../components/navbar.svelte';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Felipe Pedreros">
+	<div class="flex h-screen items-center justify-between">
+		<header class="max-w-[400px] flex flex-col h-full justify-evenly">
+			<div>
+				<h1 class="font-bold text-5xl text-primary">Felipe Pedreros</h1>
+				<h3 class="font-medium text-2xl mt-8 text-foreground">Frontend Developer</h3>
+				<p class="text-lg mt-6 text-secondary">I build accessible, incluseve products and digital experiences for the web</p>
+			</div>
+			<Navbar client:load />
+			<div class="flex gap-6 text-secondary">
+				<LucideIcon name="Twitter" class="h-6 w-6 cursor-pointer hover:text-primary" />
+				<LucideIcon name="Linkedin" class="h-6 w-6 cursor-pointer hover:text-primary" />
+				<LucideIcon name="Github" class="h-6 w-6 cursor-pointer hover:text-primary" />
+			</div>
+		</header>
+		<main class="max-w-[640px] bg-red-200 h-full pt-24 pb-36">
+			<section class="h-full bg-black flex flex-col gap-2 overflow-y-auto"></section>
+		</main>
+	</div>
+</Layout>

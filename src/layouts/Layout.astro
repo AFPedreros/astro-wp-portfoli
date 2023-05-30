@@ -1,0 +1,29 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import LigthSwitch from '../components/light-switch.svelte';
+import Glow from '../components/glow.svelte';
+---
+
+<!DOCTYPE html>
+<html class="dark" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="container h-screen bg-background dark:bg-background text-foreground dark:text-foreground overflow-hidden">
+		<div class="relative w-full">
+			<slot />
+			<LigthSwitch client:load />
+		</div>
+		<Glow client:load />
+	</body>
+</html>
