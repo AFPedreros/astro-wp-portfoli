@@ -1,6 +1,12 @@
 <script lang="ts">
     let items = ['About', 'Experience', 'Projects'];
     let activeItem = '';
+
+    if (typeof window !== 'undefined') {
+        window.addEventListener('reset', () => {
+            activeItem = '';
+        });
+    }
 </script>
 
 <nav class="hidden lg:block">

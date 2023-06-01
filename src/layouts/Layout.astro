@@ -12,6 +12,12 @@ import Glow from '../components/glow.svelte';
 <!DOCTYPE html>
 <html class="dark" lang="en">
 	<head>
+		<script>
+			(function () {
+				var theme = localStorage.getItem('theme') || 'light';
+				document.documentElement.className = theme;
+			})();
+		</script>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
@@ -19,11 +25,11 @@ import Glow from '../components/glow.svelte';
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="container h-screen bg-background dark:bg-background text-foreground dark:text-foreground overflow-hidden">
+	<body class="container bg-background dark:bg-background text-foreground dark:text-foreground">
 		<div class="relative w-full">
 			<slot />
 			<LigthSwitch client:load />
 		</div>
-		<Glow client:load />
 	</body>
+	<Glow client:load />
 </html>

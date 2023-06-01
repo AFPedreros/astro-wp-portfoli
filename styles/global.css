@@ -69,3 +69,31 @@
 *:after {
 	box-sizing: border-box;
 }
+
+/* Estilo de la barra de desplazamiento */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: hsl(var(--background));
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: hsl(var(--foreground));
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: hsl(var(--accent));
+}
+@media (min-width: 1023px) {
+	.centrado {
+		position: fixed;
+		top: 50%;
+		left: 0%;
+		transform: translateY(-50%);
+	}
+}

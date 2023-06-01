@@ -15,10 +15,15 @@
     }
   });
 
-  function handleChange(event: Event) {
-    theme = (event.target as HTMLInputElement).value;
-    localStorage.setItem('theme', theme);
-  }
+  // function handleChange(event: Event) {
+  //   theme = (event.target as HTMLInputElement).value;
+  //   localStorage.setItem('theme', theme);
+  // }
+  function handleChange(event: Event) {  
+  theme = (event.target as HTMLInputElement).value;  
+  localStorage.setItem('theme', theme);
+  document.cookie = `theme=${theme}; path=/`;  // set a cookie with the theme
+}
 
   $: if (rootEl && theme === 'light') {
     rootEl.classList.remove('dark');
