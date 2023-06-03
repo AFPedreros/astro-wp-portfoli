@@ -7,49 +7,52 @@ import Card from '../components/card.svelte';
 ---
 
 <Layout title="Felipe Pedreros">
-	<div class="lg:flex py-24 lg:justify-between gap-6">
-		<div class="min-w-[400px]"></div>
-		<header class="lg:h-fit w-full flex flex-col centrado justify-between">
+	<div class="lg:flex py-24 lg:justify-end gap-6">
+		<header class="lg:h-fit w-full flex mb-28 lg:mb-0 flex-col centrado justify-between">
 			<div class="lg:container">
-				<div class="lg:max-w-[400px] lg:mb-16">
-					<h1 class="font-bold text-4xl lg:text-5xl text-primary">
-						<a href="/" id="name-link">Felipe Pedreros</a>
-					</h1>
-					<h3 class="font-medium text-xl lg:text-2xl mb-2 text-foreground">Frontend Developer</h3>
-					<p class="text-lg text-secondary">I build accessible, incluseve products and digital experiences for the web</p>
-				</div>
-				<Navbar client:load />
-				<div class="flex lg:mt-32 mt-8 gap-6 text-secondary">
-					<LucideIcon name="Twitter" class="h-6 w-6 cursor-pointer hover:text-primary" />
-					<LucideIcon name="Linkedin" class="h-6 w-6 cursor-pointer hover:text-primary" />
-					<LucideIcon name="Github" class="h-6 w-6 cursor-pointer hover:text-primary" />
+				<div class="lg:max-w-[350px]">
+					<div class="lg:mb-16">
+						<h1 class="font-bold text-4xl lg:text-5xl text-primary">
+							<a href="/" id="name-link">Felipe Pedreros</a>
+						</h1>
+						<h3 class="font-medium text-xl lg:text-2xl mb-2 text-foreground">Frontend Developer</h3>
+						<p class="text-lg text-secondary">I build accessible, incluseve products and digital experiences for the web</p>
+					</div>
+					<Navbar client:load />
+					<div class="flex lg:mt-32 mt-8 gap-6 text-secondary">
+						<LucideIcon name="Twitter" class="h-6 w-6 cursor-pointer hover:text-primary" />
+						<LucideIcon name="Linkedin" class="h-6 w-6 cursor-pointer hover:text-primary" />
+						<LucideIcon name="Github" class="h-6 w-6 cursor-pointer hover:text-primary" />
+					</div>
 				</div>
 			</div>
 		</header>
-		<main class="lg:max-w-[640px] z-20 flex flex-col gap-32">
+		<main class="lg:max-w-[550px] z-20 flex gap-24 flex-col lg:gap-32">
 			<section id="about" class="flex flex-col gap-4 pr-2 text-secondary">
-				<h4 class="font-bold text-foreground lg:hidden">ABOUT</h4>
+				<h2 class="font-bold text-foreground lg:hidden">ABOUT</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices
 					mauris. Maecenas vitae mattis tellus. <label class="text-foreground">Nullam quis imperdiet augue.</label> Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque
 					nibh nibh, at maximus ante fermentum sit amet.
 				</p>
-				<Card /><Card />
 			</section>
 			<section id="experience" class="flex flex-col gap-4 pr-2 text-secondary">
-				<h4 class="font-bold text-foreground lg:hidden">EXPERIENCE</h4>
-				<Card />
-				<Card />
-				<Card />
-				<Card />
+				<h2 class="font-bold text-foreground lg:hidden">EXPERIENCE</h2>
+				<Card variant="experience" />
+				<Card variant="experience" />
+				<Card variant="experience" />
 			</section>
 			<section id="projects" class="flex flex-col gap-4 pr-2 text-secondary">
-				<h4 class="font-bold text-foreground lg:hidden">PROJECTS</h4>
-				<Card />
-				<Card />
-				<Card />
-				<Card />
+				<h2 class="font-bold text-foreground lg:hidden">PROJECTS</h2>
+				<Card variant="project" />
+				<Card variant="project" />
+				<Card variant="project" />
 			</section>
+			<footer>
+				<p class="text-xs text-secondary">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. <label class="text-foreground">Nullam quis imperdiet augue.</label>
+				</p>
+			</footer>
 		</main>
 	</div>
 </Layout>

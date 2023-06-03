@@ -22,7 +22,7 @@
             <div 
                 class="{activeItem === item ? 'w-20' : 'w-10'} h-[1px] mt-[2px] {activeItem === item ? 'bg-primary' : 'bg-secondary'} group-hover:bg-primary"
             ></div>
-            <p class="group-hover:text-primary font-medium text-sm">{item.toLocaleUpperCase()}</p>
+            <p class="group-hover:text-primary font-bold text-sm">{item.toLocaleUpperCase()}</p>
         </a>
     </li>
     {/each}

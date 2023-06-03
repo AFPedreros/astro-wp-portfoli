@@ -1,6 +1,6 @@
 <script lang="ts">
 	import * as icons from 'lucide-svelte';
-	type IconName = 'Sun' | 'Moon'|"Github"|"Twitter"|"Linkedin" ;
+	type IconName = 'Sun' | 'Moon'|"Github"|"Twitter"|"Linkedin"| "ArrowUpRight" ;
 	export let name: IconName;
 </script>
 

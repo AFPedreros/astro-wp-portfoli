@@ -85,10 +85,6 @@
 	background: hsl(var(--foreground));
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-	background: hsl(var(--accent));
-}
 @media (min-width: 1023px) {
 	.centrado {
 		position: fixed;
